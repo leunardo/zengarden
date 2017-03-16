@@ -17,7 +17,8 @@ body {
 	font: 75% georgia, sans-serif;
 	line-height: 1.88889;
 	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
+	background: url(background.jpg), url(background.jpg);        
+    
 	margin: 0; 
 	padding: 0;
 	}
@@ -51,11 +52,12 @@ abbr {
 
 
 /* specific divs */
-.page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
+.page-wrapper { 	
 	padding: 0 175px 0 110px;  
 	margin: 0; 
 	position: relative;
+    background: rgba(255,255,255, 0.6);
+    
 	}
 
 .intro { 
@@ -63,29 +65,23 @@ abbr {
 	width: 100%;
 	}
 
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
+header h1 { 	
 	margin-top: 10px;
-	display: block;
+	font-size: 20px;
 	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	height: 40px;
+	float: left;	
 	}
 header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
+    font-size: 16px;
+	margin-left: -200px;
+	margin-top: 35px; 
 	margin-bottom: 40px; 
-	width: 200px; 
+	width: 250px; 
 	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
+	float: left;
+    font-style: italic;
+	   
 	}
 header {
 	padding-top: 20px;
@@ -93,12 +89,24 @@ header {
 }
 
 .summary {
+    background: url(balao.png) no-repeat;
+    background-size: auto;    
 	clear: both; 
 	margin: 20px 20px 20px 10px; 
-	width: 160px; 
+	width: 300px;
+    height: 210px;
 	float: left;
+    clear:left; 
 	}
+#sumP {
+    margin-top: 43px;
+    line-height: 130%;
+}
 .summary p {
+    
+    padding-left: 60px;
+    padding-right: 60px;
+    
 	font: italic 1.1em/2.2 georgia; 
 	text-align: center;
 	}
