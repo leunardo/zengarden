@@ -53,12 +53,26 @@ abbr {
 
 /* specific divs */
 .page-wrapper { 	
+    height: 100%;
 	padding: 0 175px 0 110px;  
 	margin: 0; 
 	position: relative;
-    background: rgba(255,255,255, 0.6);
-    
+    background: rgba(255,255,255, 0.7);
+    font-size: 15px;
+    font-weight: 200;
 	}
+.page-wrapper a {
+    color: black;
+    font-weight: 400;
+    font-style: italic;
+}
+.page-wrapper h3 {
+    color: black;
+    font-weight: 300;
+}
+.page-wrapper p {
+    color: #555555;
+}
 
 .intro { 
 	min-width: 470px;
@@ -97,7 +111,12 @@ header {
     height: 210px;
 	float: left;
     clear:left; 
+    font-size: 12.5px;
 	}
+.summary a {
+    color: black;
+    font-weight: 600;
+}
 #sumP {
     margin-top: 43px;
     line-height: 130%;
@@ -134,11 +153,13 @@ footer a:link, footer a:visited {
 	right: 0;
 	}
 .sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+	background: rgba(255,255,255, 0.6); 
 	padding: 10px; 
-	margin-top: 150px; 
+	margin-top: 50px; 
 	width: 130px; 
+    font-size: 12px;
+    color: darkgray;
 	}
 .sidebar h3.select { 
 	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
