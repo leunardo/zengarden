@@ -24,7 +24,8 @@ body {
 	}
 p { 
 	margin-top: 0; 
-	text-align: justify;
+	text-align: left;
+    text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
 	}
 h3 { 
 	font: italic normal 1.4em georgia, sans-serif;
@@ -57,7 +58,7 @@ abbr {
 	padding: 0 175px 0 110px;  
 	margin: 0; 
 	position: relative;
-    background: rgba(255,255,255, 0.7);
+    background: rgba(255,255,255, 0.8);
     font-size: 15px;
     font-weight: 200;
 	}
@@ -74,10 +75,12 @@ abbr {
     color: #555555;
 }
 
-.intro { 
-	min-width: 470px;
-	width: 100%;
+.intro { 	
+	width: 100%;    
 	}
+.intro [role=article]{
+    border: none;
+}
 
 header h1 { 	
 	margin-top: 10px;
@@ -99,8 +102,26 @@ header h2 {
 	}
 header {
 	padding-top: 20px;
-	height: 87px;
+	height: 87px;  
+    clear:both;
 }
+h1, h2, h3 {
+    transition-duration: 0.5s;
+}
+h1:hover, h2:hover, h3:hover{
+    text-shadow: 4px 4px 2px rgba(200, 200, 200, 1);
+}
+
+div[role=main] div[role=article] {
+    border: 1px solid black;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background: rgba(255,255,255, 0.5);
+    clear: both;
+} 
 
 .summary {
     background: url(balao.png) no-repeat;
@@ -109,10 +130,10 @@ header {
 	margin: 20px 20px 20px 10px; 
 	width: 300px;
     height: 210px;
-	float: left;
-    clear:left; 
-    font-size: 12.5px;
+	float: left;    
+    font-size: 12.5px;    
 	}
+
 .summary a {
     color: black;
     font-weight: 600;
@@ -146,72 +167,70 @@ footer a:link, footer a:visited {
 	margin-right: 20px; 
 	}
 
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-	background: rgba(255,255,255, 0.6); 
-	padding: 10px; 
-	margin-top: 50px; 
-	width: 130px; 
-    font-size: 12px;
-    color: darkgray;
-	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-
-
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
-
+@media screen and (min-width: 1023px) {
+    .sidebar {
+        margin-left: 600px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .sidebar .wrapper {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        border: 1px black solid;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+        margin-top: 50px;
+        width: 130px;
+        font-size: 12px;
+        color: darkgray;
+    }
+    .sidebar h3.select {
+        background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left;
+        margin: 10px 0 5px 0;
+        width: 97px;
+        height: 16px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .sidebar h3.archives {
+        background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+        margin: 25px 0 5px 0;
+        width: 57px;
+        height: 14px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .sidebar h3.resources {
+        background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+        margin: 25px 0 5px 0;
+        width: 63px;
+        height: 10px;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .sidebar ul {
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar li {
+        line-height: 1.3em;
+        background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+        display: block;
+        padding-top: 5px;
+        margin-bottom: 5px;
+        list-style-type: none;
+    }
+    .sidebar li a:link {
+        color: #988F5E;
+    }
+    .sidebar li a:visited {
+        color: #B3AE94;
+    }
+}
 
 .extra1 {
 	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
